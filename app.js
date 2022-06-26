@@ -29,11 +29,11 @@ app.post("/",function(req,res){
     };
     const jsonData = JSON.stringify(data);
 
-    url = "https://us8.api.mailchimp.com/3.0/lists/511156a7e5";
+    url = "";
 
     const options = {
         method:"POST",
-        auth:"Afif2:7eaebfe029b0ca57baf78c8e1ee3f6ff-us"
+        auth:"Apikey"
     }
     const request= https.request(url,options,function(response){
         if(response.statusCode === 200){
@@ -63,8 +63,3 @@ app.listen(process.env.PORT || 3000,function(){
 console.log("port runnung on 3000");
 });
 
-// API Key
-// 7eaebfe029b0ca57baf78c8e1ee3f6ff-us8
-// list id
-// 511156a7e5
-// sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z
